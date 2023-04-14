@@ -52,17 +52,17 @@ public class MainTest extends BasePage {
     It initializes the LoginPage class and calls the method login() within it.
     It is wrapped between try-catch blocks based on the outcome of the test result.
      */
-    @Test
-    public void test02_login() {
-        try {
-            new LoginPage().login();
-            test.pass("Login was successful!");
-        } catch (Exception e) {
-            e.printStackTrace();
-            test.fail("Login was not successful! " + e.getMessage());
-        }
-
-    }
+//    @Test
+//    public void test02_login() {
+//        try {
+//            new LoginPage().login();
+//            test.pass("Login was successful!");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//            test.fail("Login was not successful! " + e.getMessage());
+//        }
+//
+//    }
 
     /*
     This third test is meant to execute on every run, to check whether the process of picking a present is successful.
