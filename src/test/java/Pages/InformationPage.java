@@ -77,7 +77,7 @@ public class InformationPage extends BasePage {
         //Clear previously uploaded pic (from previous runs)
         clickElement(By.cssSelector("span[class='remove-media']"));
         //Upload a pic without opening the file explorer
-        sendToElement(By.cssSelector("input[type='file']"), "C:\\Users\\natha\\Downloads\\Projects\\SecondProject_BuyMe_Sanity_Test-master\\src\\test\\java\\Utilities\\Kevin Bacon.jpg");
+        sendToElement(By.cssSelector("input[type='file']"), "C:\\Users\\natha\\Downloads\\Projects\\SecondProject_BuyMe_Sanity_Test-master\\src\\test\\java\\Utilities\\Kevin_Bacon.jpg");
     }
 
     //Pressing the "Next" button

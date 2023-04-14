@@ -2,4 +2,5 @@
 <config>
     <browserType>Chrome</browserType>
     <URL>https://www.buyme.co.il</URL>
+    <parameter name="sampleImage" value="/Utilities/Kevin_Bacon.jpg"/>
 </config>
