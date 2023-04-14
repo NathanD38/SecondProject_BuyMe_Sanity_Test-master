@@ -8,7 +8,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.reporters.jq.Main;
 
+import javax.swing.text.Utilities;
+import java.net.URISyntaxException;
+import java.net.URL;
+import java.nio.file.Paths;
 import java.time.Duration;
 
 /*This class is our information page, where we pick the receiver, enter their info.
@@ -27,7 +32,7 @@ public class InformationPage extends BasePage {
     }
 
     //This public login method is calling six private methods, as the steps necessary to complete all the required information.
-    public void info() {
+    public void info() throws URISyntaxException {
         pressElseButton();
         enterElseInfo();
         pickEvent();
@@ -73,11 +78,13 @@ public class InformationPage extends BasePage {
     }
 
     //Uploading a picture
-    private void uploadPic() {
+    private void uploadPic() throws URISyntaxException {
         //Clear previously uploaded pic (from previous runs)
         clickElement(By.cssSelector("span[class='remove-media']"));
         //Upload a pic without opening the file explorer
-        sendToElement(By.cssSelector("input[type='file']"), "C:\\Users\\natha\\Downloads\\Projects\\SecondProject_BuyMe_Sanity_Test-master\\src\\test\\java\\Utilities\\Kevin_Bacon.jpg");
+
+        String filePath = "C:\\Users\\natha\\Downloads\\Projects\\SecondProject_BuyMe_Sanity_Test-master\\src\\test\\java\\Kevin_Bacon.jpg";
+        sendToElement(By.cssSelector("input[type='file']"), filePath);
     }
 
     //Pressing the "Next" button
